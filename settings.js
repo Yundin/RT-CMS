@@ -1,0 +1,2 @@
+thereIsProfile = true
+isAdmin = false
