@@ -1,2 +1,3 @@
-thereIsProfile = true
+isThereProfile = true
+isThereChat = true
 isAdmin = false
