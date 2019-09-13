@@ -22,6 +22,16 @@ $(document).ready(function() {
 		var li = '<li id="icon_dock_chat"><a href="#window_chat"><img src="assets/images/icons/icon_22_network.png" />Chat</a></li>'
 		dock.append(li)
 	}
+	if (isThereNews) {
+		var pos = countMargins(iconsCount++)
+		var a = `<a class="abs icon" style="left:${pos[0]}px;top:${pos[1]}px;" href="#icon_dock_news"> <img src="assets/images/icons/icon_32_network.png" />News</a>`
+		desktop.append(a)
+		$.get("assets/pages/news.html", function(data) {
+			desktop.append(data)
+		})
+		var li = '<li id="icon_dock_news"><a href="#window_news"><img src="assets/images/icons/icon_22_network.png" />News</a></li>'
+		dock.append(li)
+	}
 });
 
 function countMargins(iconsCount) {
