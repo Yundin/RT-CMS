@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
 <meta name="description" content="JavaScript desktop environment built with jQuery." />
-<title>jQuery Desktop</title>
+<title>RT-CMS</title>
 <!--[if lt IE 7]>
 <script>
 window.top.location = 'http://desktop.sonspring.com/ie.html';
@@ -25,76 +25,10 @@ window.top.location = 'http://desktop.sonspring.com/ie.html';
     <span class="float_right" id="clock"></span>
     <ul>
       <li>
-        <a class="menu_trigger" href="#">jQuery Desktop</a>
+        <a class="menu_trigger" href="#">Настройки</a>
         <ul class="menu">
           <li>
-            <a href="http://www.amazon.com/dp/0596159773?tag=sons-20">jQuery Cookbook</a>
-          </li>
-          <li>
-            <a href="http://jqueryenlightenment.com/">jQuery Enlightenment</a>
-          </li>
-          <li>
-            <a href="http://jquery.com/">jQuery Home</a>
-          </li>
-          <li>
-            <a href="http://jquerymobile.com/">jQuery Mobile</a>
-          </li>
-          <li>
-            <a href="http://jqueryui.com/">jQuery UI</a>
-          </li>
-          <li>
-            <a href="http://learningjquery.com/">Learning jQuery</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a class="menu_trigger" href="#">HTML5 Resources</a>
-        <ul class="menu">
-          <li>
-            <a href="http://diveintohtml5.info/">Dive Into HTML5</a>
-          </li>
-          <li>
-            <a href="http://www.alistapart.com/articles/get-ready-for-html-5/">Get Ready for HTML5</a>
-          </li>
-          <li>
-            <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>
-          </li>
-          <li>
-            <a href="http://html5doctor.com/">HTML5 Doctor</a>
-          </li>
-          <li>
-            <a href="http://html5.org/">HTML5 Intro</a>
-          </li>
-          <li>
-            <a href="http://www.zeldman.com/superfriends/">HTML5 Super Friends</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a class="menu_trigger" href="#">Code</a>
-        <ul class="menu">
-          <li>
-            <a href="assets/css/desktop.css">Desktop - CSS</a>
-          </li>
-          <li>
-            <a href="assets/js/jquery.desktop.js">Desktop - JavaScript</a>
-          </li>
-          <li>
-            <a href="http://github.com/nathansmith/jQuery-Desktop">GitHub Repository</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a class="menu_trigger" href="#">Credits</a>
-        <ul class="menu">
-          <li>
-            <a href="http://sonspring.com/journal/jquery-desktop">Demo built by Nathan Smith</a>
-          </li>
-          <li>
-            <a href="http://twitter.com/adrianrodriguez/">Wallpaper by Adrian Rodriguez</a>
-          </li>
-          <li>
-            <a href="http://tango.freedesktop.org/Tango_Desktop_Project">Icons - Tango Desktop Project</a>
+            <a id="menu_icons" href="#">Настройка рабочего стола</a>
           </li>
         </ul>
       </li>
@@ -108,6 +42,25 @@ window.top.location = 'http://desktop.sonspring.com/ie.html';
       
     </ul>
   </div>
+</div>
+<div class="window settings" id="icon_settings">
+  <div class="abs window_inner">
+    <div class="window_top">
+      <span class="float_left">
+        Icons settings
+      </span>
+    </div>
+    <div class="abs window_content settings_content">
+      <div class="window_full" id="icon_settings_container">
+        Profile: <input type="checkbox" name="profile" value="isThereProfile"/><br/>
+        Chat: <input type="checkbox" name="chat" value="isThereChat"/><br/>
+        News: <input type="checkbox" name="news" value="isThereNews"/><br/>
+        <button style="position:absolute; bottom:10px; right:20px;" id="icon_settings_accept">Применить</button>
+        <button style="position:absolute; bottom:10px; right:100px;" id="icon_settings_decline">Отменить</button>
+      </div>
+    </div>
+    <div class="abs window_bottom">
+    </div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>

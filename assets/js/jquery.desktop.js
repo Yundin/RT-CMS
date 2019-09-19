@@ -291,6 +291,26 @@ var JQD = (function($, window, document, undefined) {
         if ($('#desktop').length) {
           $('body').prepend('<img id="wallpaper" class="abs" src="assets/images/misc/wallpaper.jpg" />');
         }
+      },
+      icons_settings: function() {
+        $('#menu_icons').click(function() {
+          JQD.util.window_flat();
+          JQD.util.clear_active();
+          $('#icon_settings').toggle()
+          $('#icon_settings_container').children("input").each(function() {
+            $(this).prop('checked', eval($(this).prop('value')));
+          })
+        });
+        $('#icon_settings_accept').click(function() {
+          $('#icon_settings_container').children("input").each(function() {
+            eval($(this).prop('value') + "=" + $(this).is(':checked'))
+          })
+          redrawWindows()
+          $('#icon_settings').toggle()
+        });
+        $('#icon_settings_decline').click(function() {
+          $('#icon_settings').toggle()
+        })
       }
     },
     util: {
